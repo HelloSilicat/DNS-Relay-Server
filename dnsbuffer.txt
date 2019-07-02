@@ -1,0 +1,12 @@
+121.51.23.132 ioav5-policy.ioa.tencent.com
+0.1.0.1 www.baidu.com.tencent.com
+39.156.66.14 www.baidu.com
+68.183.248.166 api.wakatime.com
+111.13.34.18 wup.browser.qq.com
+95.170.76.148 remotedev.oa.com
+121.51.141.88 freeconnect.ioa.tencent.com
+14.17.33.12 txp-01.tencent.com
+183.232.96.67 smartgate.oa.tencent.com
+39.156.66.218 zhidao.baidu.com
+112.34.111.235 hm.baidu.com
+40.90.185.223 activity.windows.com
