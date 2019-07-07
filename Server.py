@@ -116,11 +116,12 @@ class DNSRelayServer():
                 while not self.send_queue.empty():
                     addr, data, ip = self.send_queue.get()
                     res = dp.createResponsePacket(addr, data, ip)
-                    response.append((res, addr, ip))
+                    dname = dp.getDomainName(data)
+                    response.append((res, addr, ip, dname))
 
                 
-                for res, addr, ip in response:
-                    print("[SEND %s]: "%getNowTime(),"To: {}, IP: {}".format(addr, ip))
+                for res, addr, ip, dname in response:
+                    print("[SEND %s]: "%getNowTime(),"To: {}, IP: {}, Query: {}".format(addr, ip, dname))
                     self.s_listener.sendto(res, addr)
                     self.in_id.remove(dp.getPacketId(res))
             except KeyboardInterrupt:
@@ -189,7 +190,7 @@ class DNSRelayServer():
             self.s_helper.settimeout(5)
             self.s_helper.bind(('', 12345))
             print("[SUCC %s]: "%getNowTime(), "DNS Helper Socket Connect Succeed.")
-            
+
             for i in range(self.helper_thread):
                 t = threading.Thread(target=self.dns_server_helper)
                 t.setDaemon(True) 

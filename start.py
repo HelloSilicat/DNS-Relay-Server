@@ -10,9 +10,13 @@ if __name__ == '__main__':
     dns_buffer_file = "./dnsbuffer.txt"
     flush = False
 
-    for op, value in opts:
+    for op, value1 in opts:
+        if value1[0] == "=":
+            value = value1[1:]
+        else:
+            value = value1
         if op == '-f':
-            flush = True if value == "=True" or value == "True" else False
+            flush = True if value == "True" else False
         elif op == '-r':
             remote_dns = value
         elif op == '-t':

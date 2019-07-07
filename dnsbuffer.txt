@@ -1,0 +1,9 @@
+52.139.250.253 client.wns.windows.com
+140.82.113.25 live.github.com
+39.156.66.14 www.baidu.com
+222.35.78.40 s1.bdstatic.com
+222.35.78.49 b1.bdstatic.com
+222.35.78.48 t1.baidu.com
+222.35.78.48 t10.baidu.com
+222.35.78.48 t12.baidu.com
+222.35.78.48 t11.baidu.com
