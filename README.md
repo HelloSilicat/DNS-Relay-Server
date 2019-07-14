@@ -12,7 +12,7 @@ Computer Network Practice: DNS Relay Server
    ```shell
   git clone https://github.com/HelloSilicat/DNS-Relay-Server.git
   cd DNS-Relay-Server
-   ```
+  ```
 
 - Run the server
 
@@ -23,12 +23,11 @@ Computer Network Practice: DNS Relay Server
 - [Optional] You could change the running configuration, like:
 
   ```shell
-  python start.py -f=True -r=x.x.x.x -t="./dnsrelay.txt" -b="./dnsbuffer.txt" 
+  python start.py -b=True -r=x.x.x.x -t="./dnsrelay.txt" 
   
-  # -f: Flush the DNS buffer, default=False
+  # -b: Output the log, default=False
   # -t: Local DNS Query Table File, default="./dnsrelay.txt"
   # -r: Remote Queried DNS Server IP, default="10.3.9.5"
-  # -b: Local DNS Buffer File, default="./dnsbuffer.txt"
   ```
 
 
@@ -36,3 +35,4 @@ Computer Network Practice: DNS Relay Server
 ## Running Show
 
 ![show](figs/show.png)
+

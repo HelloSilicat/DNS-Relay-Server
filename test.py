@@ -13,12 +13,8 @@ plt.rcParams['axes.unicode_minus'] = False # 解决保存图像是负号'-'显�
 my_resolver = dns.resolver.Resolver()
 my_resolver.lifetime = 30000
 
-#my_resolver.nameservers = ['10.201.8.81']   #xpr
-#my_resolver.nameservers = ['10.28.149.149']
 my_resolver.nameservers = ['127.0.0.1']
-#my_resolver.nameservers = ['10.28.173.201']
-#my_resolver.nameservers = ['10.201.8.73']
-#my_resolver.nameservers = ['10.128.241.91']    # cxj
+
 
 
 lock = threading.Lock()
@@ -34,7 +30,7 @@ def getTimeStamp():
 def generate_random_name():
     ch = list(string.ascii_lowercase) + list(map(str,range(10)))
     rand_ch = random.sample(ch,random.randint(3,10))
-    return ''.join(rand_ch)+".pei.com"
+    return ''.join(rand_ch)+".xxx.com"
     #return "id.google.com.hk"
 
 def start():
